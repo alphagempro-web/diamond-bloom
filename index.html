@@ -6,95 +6,135 @@
 <title>💎 The Diamond Bloom</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
-    color:white;
-    font-family:Arial,sans-serif;
+background:#000;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial,sans-serif;
 }
 
-img{
-    width:320px;
-    animation:glow 2s infinite alternate;
-}
+/* INTRO */
 
-h1{
-    position:absolute;
-    bottom:40px;
-    text-shadow:0 0 20px cyan;
-}
-
-@keyframes glow{
-    from{
-        transform:scale(1);
-        filter:drop-shadow(0 0 10px white);
-    }
-    to{
-        transform:scale(1.05);
-        filter:drop-shadow(0 0 35px cyan);
-    }
-}
-#bouquet{
-opacity:0;
-transform:scale(.4);
-animation:show 2.5s ease forwards;
-animation-delay:4s;
-}
-@keyframes show{
-0%{
-opacity:0;
-transform:scale(.4);
-filter:blur(8px);
-}
-100%{
-opacity:1;
-transform:scale(1);
-filter:blur(0);
-}
-    }
-    #intro{
+#intro{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:#000;
+background:black;
 display:flex;
 justify-content:center;
 align-items:center;
 z-index:9999;
-animation:hideIntro 4s forwards;
+animation:introHide 4s forwards;
 }
+
 #diamond{
 font-size:90px;
-animation:pulse 1.2s infinite;
-filter:drop-shadow(0 0 25px cyan);
+animation:pulse 1.5s infinite;
+filter:drop-shadow(0 0 30px cyan);
 }
 
 @keyframes pulse{
-0%,100%{transform:scale(1);}
-50%{transform:scale(1.3);}
+0%{transform:scale(.8) rotate(0deg);}
+50%{transform:scale(1.15) rotate(180deg);}
+100%{transform:scale(.8) rotate(360deg);}
 }
 
-@keyframes hideIntro{
-0%,85%{opacity:1;}
-100%{opacity:0;visibility:hidden;}
-    }
+@keyframes introHide{
+0%,80%{
+opacity:1;
+}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* BOUQUET */
+
+#bouquet{
+width:320px;
+opacity:0;
+transform:scale(.2);
+filter:blur(10px);
+animation:showBouquet 2s forwards;
+animation-delay:4s;
+}
+
+@keyframes showBouquet{
+
+0%{
+opacity:0;
+transform:scale(.2);
+filter:blur(10px);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+filter:blur(0);
+}
+
+}
+
+/* TEXT */
+
+h1{
+
+position:absolute;
+
+bottom:35px;
+
+color:white;
+
+font-size:24px;
+
+text-shadow:0 0 20px cyan;
+
+opacity:0;
+
+animation:textShow 2s forwards;
+
+animation-delay:5.5s;
+
+}
+
+@keyframes textShow{
+
+to{
+
+opacity:1;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
+
 <div id="intro">
-  <div id="diamond">💎</div>
+
+<div id="diamond">💎</div>
+
 </div>
+
 <img id="bouquet" src="file_000000002350823084bd6f6f6fce94c3.png">
 
 <h1>✨ Some Moments Deserve To Shine Forever ✨</h1>
 
 </body>
-  </html>
+</html>
