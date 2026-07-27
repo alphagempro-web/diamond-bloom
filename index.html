@@ -64,8 +64,14 @@ visibility:hidden;
 #bouquet{
 width:320px;
 opacity:0;
-animation:show 2s forwards;
-animation-delay:4s;
+
+animation:
+show 2s forwards,
+floatBouquet 4s ease-in-out infinite;
+
+animation-delay:
+4s,
+6s;
 }
 
 @keyframes show{
