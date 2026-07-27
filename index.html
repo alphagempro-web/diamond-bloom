@@ -196,6 +196,24 @@ transform:translate(180px,120px);
 <img id="bouquet" src="file_000000002350823084bd6f6f6fce94c3.png">
 
 <h1>✨ Some Moments Deserve To Shine Forever ✨</h1>
+<script>
 
+for(let i=0;i<120;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.animationDelay=Math.random()*8+"s";
+
+s.style.animationDuration=(5+Math.random()*6)+"s";
+
+document.body.appendChild(s);
+
+}
+
+</script>
 </body>
 </html>
