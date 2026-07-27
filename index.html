@@ -52,6 +52,45 @@ filter:drop-shadow(0 0 30px cyan);
 }
 
 @keyframes introHide{
+  #flash{
+position:fixed;
+top:50%;
+left:50%;
+width:20px;
+height:20px;
+border-radius:50%;
+background:white;
+transform:translate(-50%,-50%) scale(0);
+opacity:0;
+box-shadow:0 0 40px white,0 0 120px cyan;
+animation:flash 1s forwards;
+animation-delay:3.8s;
+z-index:9998;
+}
+
+@keyframes flash{
+0%{
+opacity:0;
+transform:translate(-50%,-50%) scale(0);
+}
+40%{
+opacity:1;
+transform:translate(-50%,-50%) scale(20);
+}
+100%{
+opacity:0;
+transform:translate(-50%,-50%) scale(35);
+}
+}
+
+@keyframes floatBouquet{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
 0%,80%{
 opacity:1;
 }
@@ -181,45 +220,6 @@ transform:translate(180px,120px);
 }
 
   }
-  #flash{
-position:fixed;
-top:50%;
-left:50%;
-width:20px;
-height:20px;
-border-radius:50%;
-background:white;
-transform:translate(-50%,-50%) scale(0);
-opacity:0;
-box-shadow:0 0 40px white,0 0 120px cyan;
-animation:flash 1s forwards;
-animation-delay:3.8s;
-z-index:9998;
-}
-
-@keyframes flash{
-0%{
-opacity:0;
-transform:translate(-50%,-50%) scale(0);
-}
-40%{
-opacity:1;
-transform:translate(-50%,-50%) scale(20);
-}
-100%{
-opacity:0;
-transform:translate(-50%,-50%) scale(35);
-}
-}
-
-@keyframes floatBouquet{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-10px);
-}
-   }
 </style>
 
 </head>
