@@ -89,15 +89,23 @@ filter:blur(0);
 
 h1{
 position:absolute;
-bottom:20px;
-width:100%;
+left:50%;
+bottom:25px;
+transform:translateX(-50%);
+width:90%;
 text-align:center;
-color:white;
+color:#ffffff;
 font-size:24px;
+font-weight:bold;
+letter-spacing:2px;
 opacity:0;
 animation:textShow 2s forwards;
 animation-delay:5s;
-text-shadow:0 0 20px cyan;
+text-shadow:
+0 0 8px #ffffff,
+0 0 18px #8eefff,
+0 0 35px #00e5ff,
+0 0 55px #00e5ff;
 }
 
 @keyframes textShow{
