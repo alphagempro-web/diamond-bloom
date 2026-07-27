@@ -212,5 +212,22 @@ diamond.addEventListener("click", () => {
 
 });
   </script>
+  <script>
+const diamond = document.getElementById("diamond");
+
+diamond.addEventListener("click", function(){
+
+    diamond.style.transform = "scale(1.3) rotate(360deg)";
+    diamond.style.filter = "drop-shadow(0 0 60px white)";
+
+    setTimeout(function(){
+
+        diamond.style.transform = "";
+        diamond.style.filter = "drop-shadow(0 0 25px cyan)";
+
+    },600);
+
+});
+  </script>
 </body>
 </html>
